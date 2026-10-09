@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+    <meta name="author" content="Júlia & Ana Carolina">
+    <meta name="date" content="05.10.26">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cartao">
+        <header id="headerlogo">
+            <h1>
+                <span lang="ja">古書</span>
+                <span>Kosho</span>
+            </h1>
+            <p>Sebo Literário</p>
+
+            <nav id="menu">
+                <a href="index.html">Início</a>
+                <a href="login.html">Login</a>
+                <a href="#" id="botaosobre">Sobre</a>
+                <a href="#" id="botaocontato">Contato</a>
+            </nav>
+
+            <!-- ===== Menu lateral: SOBRE ===== -->
+            <div id="menu-vertical-sobre" class="sidebar">
+                <h3>Sobre</h3>
+                <ul>
+                    <li><a href="#" id="itemempresa">Empresa</a></li>
+                    <li><a href="#" id="itemclientes">Clientes</a></li>
+                </ul>
+
+                <!-- Subsubmenus -->
+                <div id="sub-empresa" class="subsubmenu">
+                    <h4>Empresa</h4>
+                    <p>
+                        O Kosho nasceu do amor por livros com história. Somos um sebo
+                        literário que dá uma segunda vida a obras já lidas, reunindo
+                        relíquias, clássicos e achados raros a preços de desapego.
+                    </p>
+                </div>
+
+                <div id="sub-clientes" class="subsubmenu">
+                    <h4>Clientes</h4>
+                    <p>
+                        Nossos clientes são leitores curiosos, colecionadores e caçadores
+                        de garimpos. Ao se cadastrar, você informa seu gênero literário
+                        favorito e passa a fazer parte da nossa comunidade, descobrindo
+                        livros que combinam com o seu gosto.
+                    </p>
+                </div>
+            </div>
+            <!-- ===== Menu lateral: CONTATO ===== -->
+            <div id="menu-vertical-contato" class="sidebar">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="#" id="itemtelefones">Telefones</a></li>
+                    <li><a href="#" id="itememail">Email</a></li>
+                </ul>
+
+                <div id="sub-telefones" class="subsubmenu">
+                    <h4>Telefones</h4>
+                    <p>
+                        Fale com a gente pelo telefone ou WhatsApp:<br>
+                        <strong>(32) 0000-0000</strong><br>
+                        Atendemos de segunda a sexta, das 9h às 18h.
+                    </p>
+                </div>
+
+                <div id="sub-email" class="subsubmenu">
+                    <h4>Email</h4>
+                    <p>
+                        Prefere escrever? Envie sua dúvida, sugestão ou a lista de livros
+                        que procura para
+                        <a href="mailto:contato@kosho.com.br">contato@kosho.com.br</a>.
+                        Respondemos em até dois dias úteis.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h2>Histórias que merecem uma segunda vida. Garimpe seu próximo livro favorito!</h2>
+            <div class="gifs">
+                <img class="livrosgif" src="livrogif.gif" alt="Livro passando páginas">
+            </div>
+            <a href="cadastro.html" class="botoesindex">Cadastre-se</a><br>
+            <a href="login.html" id="botaologin" class="botoesindex">Login</a><br><br>
+            <p>
+                Abra as portas da nossa biblioteca.<br>
+                Cadastre-se e encontre relíquias a preços de desapego.
+            </p>
+        </main>
+    </div><br>
+    <footer>
+        <p> Data: <time id="data-atual"></time> &copy;2026. Todos os direitos reservados. Ana Carolina e Júlia.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

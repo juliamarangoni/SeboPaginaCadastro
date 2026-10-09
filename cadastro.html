@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <meta name="author" content="Júlia e Ana Carolina">
+    <meta name="date" content="05.10.26">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cartao">
+        <header>
+            <h1>古書</h1>
+            <nav id="menu">
+                <a href="index.html">Início</a>
+                <a href="login.html">Login</a>
+                <a href="#" id="botaosobre">Sobre</a>
+                <a href="#" id="botaocontato">Contato</a>
+            </nav>
+
+            <!-- ===== Menu lateral: SOBRE ===== -->
+            <div id="menu-vertical-sobre" class="sidebar">
+                <h3>Sobre</h3>
+                <ul>
+                    <li><a href="#" id="itemempresa">Empresa</a></li>
+                    <li><a href="#" id="itemclientes">Clientes</a></li>
+                </ul>
+
+                <!-- Subsubmenus -->
+                <div id="sub-empresa" class="subsubmenu">
+                    <h4>Empresa</h4>
+                    <p>
+                        O Kosho nasceu do amor por livros com história. Somos um sebo
+                        literário que dá uma segunda vida a obras já lidas, reunindo
+                        relíquias, clássicos e achados raros a preços de desapego.
+                    </p>
+                </div>
+
+                <div id="sub-clientes" class="subsubmenu">
+                    <h4>Clientes</h4>
+                    <p>
+                        Nossos clientes são leitores curiosos, colecionadores e caçadores
+                        de garimpos. Ao se cadastrar, você informa seu gênero literário
+                        favorito e passa a fazer parte da nossa comunidade, descobrindo
+                        livros que combinam com o seu gosto.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ===== Menu lateral: CONTATO ===== -->
+            <div id="menu-vertical-contato" class="sidebar">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="#" id="itemtelefones">Telefones</a></li>
+                    <li><a href="#" id="itememail">Email</a></li>
+                </ul>
+
+                <div id="sub-telefones" class="subsubmenu">
+                    <h4>Telefones</h4>
+                    <p>
+                        Fale com a gente pelo telefone ou WhatsApp:<br>
+                        <strong>(32) 0000-0000</strong><br>
+                        Atendemos de segunda a sexta, das 9h às 18h.
+                    </p>
+                </div>
+
+                <div id="sub-email" class="subsubmenu">
+                    <h4>Email</h4>
+                    <p>
+                        Envie sua dúvida, sugestão ou a lista de livros
+                        que procura para
+                        <a href="mailto:kosho@kosho.com.br">kosho@kosho.com.br</a>.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h1>Cadastre-se</h1><br>
+            <form id="form-cadastro">
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input id="nome" type="text" required placeholder="Insira seu nome">
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="email" required
+                           pattern="[^\s@]+@[Gg][Mm][Aa][Ii][Ll]\.[Cc][Oo][Mm]"
+                           title="Use um e-mail do Gmail, terminando em @gmail.com"
+                           placeholder="Insira seu E-mail (@gmail.com)">
+                </div>
+
+                <div class="campo">
+                    <label for="cpf">CPF:</label>
+                    <input id="cpf" type="text" inputmode="numeric" maxlength="11" required placeholder="Insira seu CPF">
+                </div>
+
+                <div class="campo">
+                    <label for="endereco">Endereço:</label>
+                    <input id="endereco" type="text" required placeholder="Insira seu endereço">
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha:</label>
+                    <input id="senha" type="password" required placeholder="Insira sua Senha">
+                </div>
+
+                <div class="campo">
+                    <label for="generolit">Preferência de Gênero Literário:</label>
+                    <input id="generolit" type="text" required placeholder="Insira sua preferência literária">
+                </div>
+
+                <div class="botoes-form">
+                    <a href="index.html" class="botoescadastro" id="botaovoltar">Voltar</a>
+                    <button type="submit" id="botaocadastrar" class="botoescadastro">Cadastrar</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <footer><br>
+        <p>Data: <time id="data-atual"></time> &copy;2026. Todos os direitos reservados. Ana Carolina e Júlia.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

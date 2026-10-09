@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body {
+    background-image: linear-gradient(rgba(119, 85, 51, 0.2), rgba(119, 85, 51, 0.2)), url("fundolivros.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 100px 1rem 1rem;   /* 100px em cima: ~65px do menu fixo + ~35px de respiro */
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    margin-bottom: 40px;   /* distância entre o header e o main (aumente ou diminua este número) */
+}
+
+header:focus {
+    font-size: 20px;
+}
+
+/* ===== Menus laterais (Sobre e Contato) ===== */
+
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: -250px;              /* escondido fora da tela */
+    width: 200px;
+    height: auto;              /* cresce conforme o conteúdo */
+    max-height: calc(100vh - 50px); /* nunca passa da altura da tela */
+    overflow-y: auto;               /* se passar, ganha rolagem própria */
+    box-sizing: border-box;
+    background-color: #5e4329;
+    color: #f2f5e2;
+    padding: 20px;
+    text-align: left;
+    z-index: 100;
+    transition: left 0.4s ease;
+}
+
+/* QUANDO O JAVASCRIPT ADICIONA "active", O MENU ENTRA NA TELA */
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar h3 {
+    font-family: 'Stick', sans-serif;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    color: #f2f5e2;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Subsubmenu (parágrafo dentro do menu lateral) ===== */
+
+.subsubmenu {
+    display: none;             /* escondido até o JavaScript adicionar "aberto" */
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #47331f;
+    color: #f2f5e2;
+    text-align: left;
+}
+
+/* QUANDO O JAVASCRIPT ADICIONA "aberto", O PARÁGRAFO APARECE */
+.subsubmenu.aberto {
+    display: block;
+}
+
+.subsubmenu h4 {
+    font-family: 'Stick', sans-serif;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.subsubmenu p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.subsubmenu a {
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+/* ===== Cartão e layout ===== */
+
+.cartao {
+    background-color: rgba(242, 245, 226, 0.90);
+    padding: 50px 100px;
+    
+}
+
+#cartaokosho {
+    background-color: rgba(242, 245, 226, 0.75);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1300px;
+    min-height: 150vh;   /* 1,5x a altura da tela */
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+#headerlogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 25px;
+}
+
+#logoprincipal {
+    gap: 10px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.botoesindex {
+    font-family: 'Stick', sans-serif;
+    font-size: 16px;
+    background-color: #5e4329;
+    color: #e1e4d2;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.botoescadastro {
+    font-family: 'Stick', sans-serif;
+    font-size: 16px;
+    background-color: #5e4329;
+    color: #e1e4d2;
+    padding: 10px 7px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.botoesindex:hover {
+    background-color: #47331f;
+}
+
+#botaovoltar {
+    background-color: #e2e5d1;
+    border: #5e4329 solid 3px;
+    color: #5e4329;
+}
+
+.estante {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;   /* sem isso, não quebram de linha em telas pequenas */
+    gap: 25px;
+    padding: 18px 12px;
+    background-color: #c7cab9;
+}
+
+.preco {
+    font-size: 17px;
+    color: #47331f;
+}
+
+#menu {
+    position: fixed;        /* cola no topo da janela, fora do cartão */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    background-color: #e1e4d2;
+    z-index: 50;            /* acima do conteúdo, abaixo do menu lateral (100) */
+}
+
+#menu a {
+    color: #290024;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+    color: #5e4329;
+}
+
+h1 {
+    font-family: 'Stick', sans-serif;
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+/* Primeiro título da seção de cadastro de livro ("Tem um livro parado na estante?").
+   Sem margem de baixo, para ficar perto do "Cadastre aqui!".
+   (Margens verticais vizinhas não somam: vale a MAIOR das duas.) */
+#chamadacadastro {
+    margin-bottom: 0;
+}
+
+#cadastreaqui {
+    font-family: 'Stick', sans-serif;
+    font-size: 40px;
+    margin-top: 8px;      /* distância entre os dois títulos: aumente ou diminua este número */
+    line-height: 1;
+}
+
+p {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+footer {
+    padding: 6px 500px;
+    background-color: rgb(199, 202, 185, 0.85);
+}
+
+img {
+    width: 170px;
+    max-width: 100%;   /* nunca passa da largura do espaço onde está */
+    height: auto;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto -35px;
+}
+
+.gifs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 20px 0;
+}
+
+.livrosgif {
+    margin-right: -25px;
+    margin-bottom: 20px;
+}
+
+.titulolivro {
+    font-size: 17px;
+}
+
+button {
+    font-size: 45px;         
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #290024;
+    color: #f2f5e2;
+    font-family: 'Stick', sans-serif;
+    border: none;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: #47331f;
+}
+
+.btngarimpo {
+    font-size: 15px;
+    padding: 7px 15px;
+    cursor: pointer;
+    background-color: #5e4329;
+    color: #f2f5e2;
+    font-family: sans-serif;
+    border: none;
+}
+
+.livrosgarimpo {
+    text-align: center;
+    max-width: 240px;
+    padding: 18px 12px;
+    background-color: #dfe2d0;
+}
+
+#secaogarimpo {
+    
+    text-align: left;
+    padding: 30px 50px;
+    background-color: #e1e4d2;
+}
+
+#secaocadastro {
+    text-align: left;
+    padding: 60px 100px;
+    background-color: #e1e4d2;
+}
+
+/* ===== Formulário (cadastro / login) ===== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form button {
+    align-self: center;
+    margin-top: 10px;
+}
+
+/* Agrupa Voltar + Cadastrar lado a lado */
+.botoes-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.botoes-form button {
+    margin-top: 0;   /* anula o margin-top do "form button" */
+    border-radius: 2px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 18px;
+}
+
+.campo input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    font-family: 'Alata', sans-serif;
+    font-size: 16px;
+    border: 1px solid #775533;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo input:focus {
+    outline: none;                    /* tira o contorno azul padrão do navegador */
+    border: #290024 solid 3px;        /* borda passa para o roxo escuro */
+    background-color: #fffff5;        /* fundo levemente mais claro */
+}
+
+/* ===== Mensagem de sucesso (cadastro de livro no kosho.html) ===== */
+
+.mensagem-sucesso {
+    margin: 10px 0 0;
+    padding: 10px 14px;
+    background-color: #e6efd5;
+    border: 2px solid #5e4329;
+    color: #47331f;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* O atributo "hidden" esconde a mensagem; esta linha garante que ele
+   vença o "display" definido acima */
+.mensagem-sucesso[hidden] {
+    display: none;
+}
+
+/* ============================================================
+   ADAPTAÇÃO PARA TABLET E CELULAR (media queries)
+   Ficam NO FINAL do arquivo de propósito: assim elas sobrescrevem
+   os estilos normais de cima quando a tela é pequena.
+   ============================================================ */
+
+/* ----- Tablet e telas médias (até 1000px) ----- */
+@media (max-width: 1000px) {
+    .cartao {
+        padding: 40px;
+    }
+
+    #cartaokosho {
+        padding: 30px;
+        min-height: auto;      /* deixa de forçar 1,5x a altura da tela */
+    }
+
+    #secaogarimpo {
+        padding: 30px 25px;
+    }
+
+    #secaocadastro {
+        padding: 40px 25px;
+    }
+
+    footer {
+        padding: 6px 40px;     /* 500px de cada lado não cabe em tela menor */
+    }
+}
+
+/* ----- Celular (até 600px) ----- */
+@media (max-width: 600px) {
+    body {
+        padding: 85px 6px 12px;        /* ~51px do menu fixo + ~34px de respiro */
+        background-attachment: scroll; /* "fixed" costuma falhar em celulares (principalmente iPhone) */
+    }
+
+    /* Cartões ocupam a largura toda e perdem o espaço lateral gigante */
+    .cartao {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px 16px;
+    }
+
+    #cartaokosho {
+        padding: 15px 8px;
+        min-height: auto;
+    }
+
+    header {
+        padding: 10px;
+        margin-bottom: 25px;   /* distância entre o header e o main no celular */
+    }
+
+    #headerlogo {
+        padding-top: 10px;
+    }
+
+    /* Menu do topo mais compacto */
+    #menu {
+        gap: 14px;
+        padding: 12px 10px;
+    }
+
+    #menu a {
+        font-size: 16px;
+        padding: 4px 2px;
+    }
+
+    /* Menus laterais: mais estreitos e abaixo do menu do topo */
+    .sidebar {
+        top: 54px;
+        width: 75%;
+        max-width: 260px;
+        left: -300px;                    /* escondido fora da tela */
+        max-height: calc(100vh - 54px);
+        padding: 16px;
+    }
+
+    /* Títulos menores */
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #cadastreaqui {
+        font-size: 28px;
+    }
+
+    .livrosgif {
+        width: 130px;
+    }
+
+    /* Botões e links maiores, mais fáceis de tocar com o dedo */
+    .botoesindex {
+        display: inline-block;
+        padding: 12px 18px;
+    }
+
+    .botoescadastro {
+        padding: 12px 14px;
+    }
+
+    .botoes-form {
+        flex-wrap: wrap;
+    }
+
+    /* Estante de livros: 2 por linha */
+    #secaogarimpo {
+        padding: 20px 6px;
+    }
+
+    #secaocadastro {
+        padding: 25px 8px;
+    }
+
+    .estante {
+        gap: 10px;
+        padding: 10px 6px;
+    }
+
+    .livrosgarimpo {
+        width: calc(50% - 5px);
+        max-width: none;
+        box-sizing: border-box;
+        padding: 12px 8px;
+    }
+
+    .livrosgarimpo img {
+        width: 100%;
+        max-width: 140px;
+    }
+
+    .titulolivro {
+        font-size: 14px;
+    }
+
+    .preco {
+        font-size: 15px;
+    }
+
+    .btngarimpo {
+        width: 100%;
+        padding: 10px 8px;
+    }
+
+    /* Formulários ocupam a largura disponível (até 320px) */
+    form {
+        width: 100%;
+    }
+
+    /* Rodapé */
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 12px;
+    }
+}
+
+/* ----- Celular bem pequeno (até 340px): 1 livro por linha ----- */
+@media (max-width: 340px) {
+    .livrosgarimpo {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}

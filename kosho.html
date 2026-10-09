@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosho - Sebo Literário</title>
+    <meta name="author" content="Júlia e Ana Carolina">
+    <meta name="date" content="05.10.26">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="cartaokosho">
+        <header id="headerlogo">
+            <div id="logoprincipal">
+                <h1>
+                    <span lang="ja">古書</span>
+                    <span>Kosho</span>
+                </h1>
+                <p>Sebo Literário</p>
+            </div>
+            <nav id="menu">
+                <a href="index.html">Início</a>
+                <a href="login.html">Login</a>
+                <a href="#" id="botaosobre">Sobre</a>
+                <a href="#" id="botaocontato">Contato</a>
+            </nav>
+
+            <!-- ===== Menu lateral: SOBRE ===== -->
+            <div id="menu-vertical-sobre" class="sidebar">
+                <h3>Sobre</h3>
+                <ul>
+                    <li><a href="#" id="itemempresa">Empresa</a></li>
+                    <li><a href="#" id="itemclientes">Clientes</a></li>
+                </ul>
+
+                <!-- Subsubmenus -->
+                <div id="sub-empresa" class="subsubmenu">
+                    <h4>Empresa</h4>
+                    <p>
+                        O Kosho nasceu do amor por livros com história. Somos um sebo
+                        literário que dá uma segunda vida a obras já lidas, reunindo
+                        relíquias, clássicos e achados raros a preços de desapego.
+                    </p>
+                </div>
+
+                <div id="sub-clientes" class="subsubmenu">
+                    <h4>Clientes</h4>
+                    <p>
+                        Nossos clientes são leitores curiosos, colecionadores e caçadores
+                        de garimpos. Ao se cadastrar, você informa seu gênero literário
+                        favorito e passa a fazer parte da nossa comunidade, descobrindo
+                        livros que combinam com o seu gosto.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ===== Menu lateral: CONTATO ===== -->
+            <div id="menu-vertical-contato" class="sidebar">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="#" id="itemtelefones">Telefones</a></li>
+                    <li><a href="#" id="itememail">Email</a></li>
+                </ul>
+
+                <div id="sub-telefones" class="subsubmenu">
+                    <h4>Telefones</h4>
+                    <p>
+                        Fale com a gente pelo telefone ou WhatsApp:<br>
+                        <strong>(32) 0000-0000</strong><br>
+                        Atendemos de segunda a sexta, das 9h às 18h.
+                    </p>
+                </div>
+
+                <div id="sub-email" class="subsubmenu">
+                    <h4>Email</h4>
+                    <p>
+                        Envie sua dúvida, sugestão ou a lista de livros
+                        que procura para
+                        <a href="mailto:kosho@kosho.com.br">kosho@kosho.com.br</a>.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="secaogarimpo">
+                <h3>Livros Disponíveis para garimpo</h3>
+                <div class="estante">
+                    <div id="mortenonilo" class="livrosgarimpo"
+                         data-titulo="Morte no Nilo"
+                         data-autor="Agatha Christie"
+                         data-genero="Mistério"
+                         data-preco="24.90">
+                        <img src="mortenonilo.jpg" alt="Morte no Nilo - Agatha Christie">
+                        <h5>
+                            <span class="titulolivro">Morte no Nilo - Agatha Christie</span><br>
+                            <span class="preco">R$24,90</span>
+                        </h5>
+                        <button class="btngarimpo" type="button">Garimpar</button>
+                    </div>
+                    <div id="1984" class="livrosgarimpo"
+                         data-titulo="1984"
+                         data-autor="George Orwell"
+                         data-genero="Distopia"
+                         data-preco="23.00">
+                        <img src="1984.jpg" alt="1984 - George Orwell">
+                        <h5>
+                            <span class="titulolivro">1984 - George Orwell</span><br>
+                            <span class="preco">R$23,00</span>
+                        </h5>
+                        <button class="btngarimpo" type="button">Garimpar</button>
+                    </div>
+                    <div id="ahoradaestrela" class="livrosgarimpo"
+                         data-titulo="A Hora da Estrela"
+                         data-autor="Clarice Lispector"
+                         data-genero="Romance"
+                         data-preco="18.99">
+                        <img src="ahoradaestrela.jpg" alt="A Hora da Estrela - Clarice Lispector">
+                        <h5>
+                            <span class="titulolivro">A Hora da Estrela - Clarice Lispector</span><br>
+                            <span class="preco">R$18,99</span><br>
+                        </h5>
+                        <button class="btngarimpo" type="button">Garimpar</button>
+                    </div>
+                    <div id="noitesbrancas" class="livrosgarimpo"
+                         data-titulo="Noites Brancas"
+                         data-autor="Fiódor Dostoiévski"
+                         data-genero="Romance"
+                         data-preco="12.00">
+                        <img src="noitesbrancas.jpg" alt="Noites Brancas - Fiódor Dostoiévski">
+                        <h5>
+                            <span class="titulolivro">Noites Brancas - Fiódor Dostoiévski</span><br>
+                            <span class="preco">R$12,00</span>
+                        </h5>
+                        <button class="btngarimpo" type="button">Garimpar</button>
+                    </div>
+                    <div id="aot" class="livrosgarimpo"
+                         data-titulo="Shingeki no Kyojin (Volume 1)"
+                         data-autor="Hajime Isayama"
+                         data-genero="Mangá"
+                         data-preco="27.90">
+                        <img src="shingeki.jpg" alt="Shingeki no Kyojin - Hajime Isayama">
+                        <h5>
+                            <span class="titulolivro">Shingeki no Kyojin (Volume 1) - Hajime Isayama</span><br>
+                            <span class="preco">R$27,90</span>
+                        </h5>
+                        <button class="btngarimpo" type="button">Garimpar</button>
+                    </div>
+                    <div id="jogosdeherança" class="livrosgarimpo"
+                         data-titulo="Jogos de Herança"
+                         data-autor="Jennifer Lynn Barnes"
+                         data-genero="Suspense"
+                         data-preco="20.00">
+                        <img src="jogosdeherança.jpg" alt="Jogos de Herança - Jennifer Lynn Barnes">
+                        <h5>
+                            <span class="titulolivro">Jogos de Herança - Jennifer Lynn Barnes</span><br>
+                            <span class="preco">R$20,00</span>
+                        </h5>
+                        <button class="btngarimpo" type="button">Garimpar</button>
+                    </div>
+                    <div id="hobbit" class="livrosgarimpo"
+                         data-titulo="O Hobbit"
+                         data-autor="J.R.R. Tolkien"
+                         data-genero="Fantasia"
+                         data-preco="22.00">
+                        <img src="hobbit.jpg" alt="O Hobbit - J.R.R Tolkien">
+                        <h5>
+                            <span class="titulolivro">O Hobbit - J.R.R Tolkien</span><br>
+                            <span class="preco">R$22,00</span>
+                        </h5>
+                        <button class="btngarimpo" type="button">Garimpar</button>
+                    </div>
+                    <div id="adivinacomedia" class="livrosgarimpo"
+                         data-titulo="A Divina Comédia (Volume Único)"
+                         data-autor="Dante Alighieri"
+                         data-genero="Clássico"
+                         data-preco="35.00">
+                        <img src="adivinacomedia.jpg" alt="A Divina Comédia - Dante Alighieri">
+                        <h5>
+                            <span class="titulolivro">A Divina Comédia (Volume Único) - Dante Alighieri</span><br>
+                            <span class="preco">R$35,00</span>
+                        </h5>
+                        <button class="btngarimpo" type="button">Garimpar</button>
+                    </div>
+                    <div id="omorrodosventosuivantes" class="livrosgarimpo"
+                         data-titulo="O Morro dos Ventos Uivantes"
+                         data-autor="Emily Brontë"
+                         data-genero="Romance"
+                         data-preco="12.00">
+                        <img src="omorrodosventosuivantes.jpg" alt="O Morro dos Ventos Uivantes - Emily Brontë">
+                        <h5>
+                            <span class="titulolivro">O Morro dos Ventos Uivantes - Emily Brontë</span><br>
+                            <span class="preco">R$12,00</span>
+                        </h5>
+                        <button class="btngarimpo" type="button">Garimpar</button>
+                    </div>
+                </div>
+            </section><br>
+            <section id="secaocadastro">
+                <div id="titulos-cadastro">
+                    <h3>Tem um livro parado na estante?</h3>
+                    <h3 id="cadastreaqui">Cadastre aqui!</h3>
+                </div><br>
+                <div class="estante">
+                    <form class="campo" id="form-livro">
+                        <label for="titulo-exemplar">Título do Exemplar:</label>
+                        <input id="titulo-exemplar" type="text" required placeholder="Insira o título do Livro">
+                        <label for="editora">Editora:</label>
+                        <input id="editora" type="text" required placeholder="Insira a editora do exemplar">
+                        <label for="ISBN">ISBN:</label>
+                        <input id="ISBN" type="text" inputmode="numeric" maxlength="13" required placeholder="Insira o nº ISBN">
+                        <label for="genero">Gênero literário do exemplar:</label>
+                        <input id="genero" type="text" required placeholder="Insira o gênero do exemplar">
+                        <button type="submit" class="botoescadastro">Cadastrar</button>
+                        <!-- Mensagem de sucesso: começa escondida e o JavaScript mostra depois do cadastro -->
+                        <p id="msg-livro" class="mensagem-sucesso" role="status" aria-live="polite" hidden></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div><br>
+    <footer>
+        <p>Data: <time id="data-atual"></time> &copy;2026. Todos os direitos reservados. Ana Carolina e Júlia.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
